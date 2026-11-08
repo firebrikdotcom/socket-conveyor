@@ -20,7 +20,7 @@
 
 ---
 
-<!-- Demo video: insert the user-supplied video here before pushing this README. -->
+https://github.com/user-attachments/assets/f4d6dd56-e8e8-4a83-81b5-328457728f1e
 
 A PHP WebSocket server and message router built on [OpenSwoole](https://openswoole.com/). Use its native action-based protocol for custom applications, or run its Pusher-compatible mode with Laravel Echo and Laravel's Reverb or Pusher broadcaster.
 
