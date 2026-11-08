@@ -6,39 +6,42 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+  contents: read
+
 jobs:
-  build:
-
+  development:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Setup development PHP
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: '8.3'
+          extensions: openswoole-26.2.0, sqlite3
+          coverage: none
+          tools: composer:v2
+      # Preserve the server's exact Process pin; its validation warning is intentional.
+      - run: composer validate
+      - run: composer install --prefer-dist --no-interaction --no-progress
+      - run: composer check-platform-reqs
+      - name: Run test suite
+        timeout-minutes: 3
+        run: |
+          php --ri openswoole
+          composer run-script test -- --debug
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.2'
-        extensions: openswoole, sqlite3
-        coverage: none
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate
-
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v4
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
-
-    - name: Install dependencies
-      if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install --prefer-dist --no-progress
-
-    - name: Run test suite
-      timeout-minutes: 3
-      run: |
-        php --ri openswoole
-        composer run-script test -- --debug
+  minimum-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Setup minimum runtime PHP
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: '8.2'
+          extensions: openswoole-22.1.2, sqlite3
+          coverage: none
+          tools: composer:v2
+      - run: composer install --no-dev --prefer-dist --no-interaction --no-progress
+      - run: composer check-platform-reqs --no-dev
+      - run: php -r 'require "vendor/autoload.php"; if (!class_exists("Conveyor\\Conveyor")) { exit(1); }'

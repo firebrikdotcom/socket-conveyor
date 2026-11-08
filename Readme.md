@@ -1,13 +1,30 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/conveyor-logo-dark.svg">
-  <img src="assets/conveyor-logo-light.svg" alt="Socket Conveyor logo" width="128" height="128">
-</picture>
-
 # Socket Conveyor
+
+<p align="center">
+  <img width="454" style="max-height: 240px; max-width: 100%; height: auto;" src="assets/social/socket-conveyor-gemini.jpg" alt="Socket Conveyor — WebSockets for PHP and Laravel">
+</p>
+
+<p align="center">
+  <a href="https://socketconveyor.com">Documentation</a> ·
+  <a href="https://socketconveyor.com/installation.html">Install</a> ·
+  <a href="#quick-start-with-docker">Quick start</a> ·
+  <a href="docs/usage.md">Usage guide</a>
+</p>
+
+<p align="center">
+  <a href="LICENSE.md"><img src="https://img.shields.io/github/license/firebrikdotcom/socket-conveyor" alt="MIT license"></a>
+  <a href="https://github.com/firebrikdotcom/socket-conveyor/releases"><img src="https://img.shields.io/github/v/release/firebrikdotcom/socket-conveyor" alt="Latest GitHub release"></a>
+  <a href="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/php.yml?query=branch%3Amaster"><img src="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/php.yml/badge.svg?branch=master" alt="PHP tests and minimum runtime"></a>
+  <a href="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/docker.yml?query=branch%3Amaster"><img src="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/docker.yml/badge.svg?branch=master" alt="Docker build and smoke test"></a>
+</p>
+
+---
+
+https://github.com/user-attachments/assets/f4d6dd56-e8e8-4a83-81b5-328457728f1e
 
 A PHP WebSocket server and message router built on [OpenSwoole](https://openswoole.com/). Use its native action-based protocol for custom applications, or run its Pusher-compatible mode with Laravel Echo and Laravel's Reverb or Pusher broadcaster.
 
-[Documentation](https://socketconveyor.com) · [Usage guide](docs/usage.md) · [Laravel Echo guide](docs/laravel-echo-reverb-compatibility.md) · [Docker Hub](https://hub.docker.com/r/lotharthesavior/socket-conveyor)
+[Laravel Echo guide](docs/laravel-echo-reverb-compatibility.md) · [Docker Hub](https://hub.docker.com/r/lotharthesavior/socket-conveyor)
 
 ## What it does
 
@@ -19,11 +36,13 @@ A PHP WebSocket server and message router built on [OpenSwoole](https://openswoo
 
 ## Requirements
 
-For the PHP library, you need PHP 8.2 or newer, Composer, and the OpenSwoole extension (version 22.0 or newer). The Docker image includes PHP and OpenSwoole.
+For the PHP library, you need PHP 8.2 or newer, Composer, and the OpenSwoole extension (version 22.0 or newer). The Docker image includes PHP and OpenSwoole. Development with the renamed PHP client requires PHP 8.3+ and OpenSwoole 26.2+; the server library keeps its PHP 8.2 runtime minimum.
 
 ```sh
-composer require kanata-php/socket-conveyor
+composer require firebrikdotcom/socket-conveyor
 ```
+
+The `firebrikdotcom/*` Composer namespace is being prepared. Until it is registered on Packagist and a release is published, existing installations continue to use `kanata-php/socket-conveyor`. The Docker image below remains available under its existing name.
 
 See the [usage guide](docs/usage.md) for a native server, protocol examples and configuration.
 
