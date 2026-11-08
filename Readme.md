@@ -1,10 +1,7 @@
 # Socket Conveyor
 
 <p align="center">
-  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/conveyor-logo-dark.svg">
-  <img width="96" height="96" style="max-height: 96px; max-width: 96px;" src="assets/conveyor-logo-light.svg" alt="Socket Conveyor logo">
-  </picture>
+  <img width="454" style="max-height: 240px; max-width: 100%; height: auto;" src="assets/social/socket-conveyor-gemini.jpg" alt="Socket Conveyor — WebSockets for PHP and Laravel">
 </p>
 
 <p align="center">
@@ -17,8 +14,8 @@
 <p align="center">
   <a href="LICENSE.md"><img src="https://img.shields.io/github/license/firebrikdotcom/socket-conveyor" alt="MIT license"></a>
   <a href="https://github.com/firebrikdotcom/socket-conveyor/releases"><img src="https://img.shields.io/github/v/release/firebrikdotcom/socket-conveyor" alt="Latest GitHub release"></a>
-  <a href="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/php.yml"><img src="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/php.yml/badge.svg" alt="Tests"></a>
-  <a href="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/docker.yml"><img src="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/docker.yml/badge.svg" alt="Docker smoke test"></a>
+  <a href="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/php.yml?query=branch%3Amaster"><img src="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/php.yml/badge.svg?branch=master" alt="PHP tests and minimum runtime"></a>
+  <a href="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/docker.yml?query=branch%3Amaster"><img src="https://github.com/firebrikdotcom/socket-conveyor/actions/workflows/docker.yml/badge.svg?branch=master" alt="Docker build and smoke test"></a>
 </p>
 
 ---
