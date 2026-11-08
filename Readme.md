@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/conveyor-logo-dark.svg">
+  <img src="assets/conveyor-logo-light.svg" alt="Socket Conveyor logo" width="128" height="128">
+</picture>
+
 # Socket Conveyor
 
 A PHP WebSocket server and message router built on [OpenSwoole](https://openswoole.com/). Use its native action-based protocol for custom applications, or run its Pusher-compatible mode with Laravel Echo and Laravel's Reverb or Pusher broadcaster.
