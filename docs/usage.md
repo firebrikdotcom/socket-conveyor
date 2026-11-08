@@ -12,8 +12,10 @@ It can run in two modes:
 Install the package with Composer:
 
 ```bash
-composer require kanata-php/socket-conveyor
+composer require firebrikdotcom/socket-conveyor
 ```
+
+The new Composer namespace is pending registration and release publication. Existing installations use `kanata-php/socket-conveyor` until that migration is available.
 
 For local development in this repository, install dependencies from the project
 root:

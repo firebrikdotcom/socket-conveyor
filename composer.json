@@ -1,5 +1,5 @@
 {
-    "name": "kanata-php/socket-conveyor",
+    "name": "firebrikdotcom/socket-conveyor",
     "description": "A WebSocket/Socket message Router",
     "type": "library",
     "license": "MIT",
@@ -21,7 +21,7 @@
         "phpro/grumphp": "^2.3",
         "phpstan/phpstan": "^1.10",
         "squizlabs/php_codesniffer": "^3.13.6",
-        "kanata-php/conveyor-server-client": "^0.1.0",
+        "firebrikdotcom/conveyor-server-client": "^0.2.0",
         "friendsofphp/php-cs-fixer": "^3.41"
     },
     "autoload": {
@@ -42,5 +42,11 @@
         "allow-plugins": {
             "phpro/grumphp": true
         }
+    },
+    "homepage": "https://github.com/firebrikdotcom/socket-conveyor",
+    "support": {
+        "issues": "https://github.com/firebrikdotcom/socket-conveyor/issues",
+        "source": "https://github.com/firebrikdotcom/socket-conveyor",
+        "docs": "https://github.com/firebrikdotcom/socket-conveyor#readme"
     }
 }

@@ -9,7 +9,7 @@
  * @package  Conveyor
  * @author   Savio Resende <savio@savioresende.com>
  * @license  https://opensource.org/licenses/MIT MIT
- * @link     https://github.com/kanata-php/socket-conveyor
+ * @link     https://github.com/firebrikdotcom/socket-conveyor
  */
 
 use Conveyor\SubProtocols\Pusher\PusherSigner;
